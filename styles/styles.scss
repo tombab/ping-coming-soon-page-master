@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+$white: #ffffff;
+$red: hsl(354, 100%, 66%);
+$grey: hsl(0, 0%, 59%);
+$blue: hsl(223, 87%, 63%);
+$darkBlue: hsl(209, 33%, 12%);
+$greyBlue: hsl(223, 100%, 88%);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  box-sizing: inherit;
+  color: black;
+}
+
+#pageContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  img {
+    width: 25%;
+  }
+  h4 {
+    padding-top: 5px;
+    margin-bottom: 0.5em;
+  }
+  span {
+    font-weight: 300;
+    color: $grey;
+  }
+  p {
+    font-size: 0.6em;
+  }
+}
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  margin: 20px 0 60px;
+  input {
+    border-radius: 20px;
+    height: 40px;
+    border: 1px solid $greyBlue;
+    padding: 0 30px;
+    font-size: 0.6em;
+    font-weight: 300;
+  }
+  #response {
+    font-size: 0.5em;
+    color: $red;
+  }
+  button {
+    margin: 10px 0;
+    border-radius: 20px;
+    height: 40px;
+    border: 1px solid $blue;
+    color: $white;
+    background-color: $blue;
+  }
+  button:hover {
+    background-color: $greyBlue;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+input::placeholder {
+  color: $greyBlue;
+}
+
+#imageContainer {
+  img {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+#footer {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  #social {
+    display: flex;
+    justify-content: space-evenly;
+    i {
+      padding-top: 1px;
+      color: $blue;
+      border: 1px solid $greyBlue;
+      border-radius: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      font-size: 13px;
+    }
+    i:hover {
+      color: $white;
+      background-color: $blue;
+      cursor: pointer;
+    }
+  }
+  p {
+    margin-top: 20px;
+    color: $grey;
+    font-size: 0.4em;
+  }
+}
+
+.red {
+  border: 1px solid $red !important;
+}
+
+.red::placeholder {
+  color: black !important;
+}
+
+@media screen and (min-width: 1440px) {
+  #header {
+    font-size: 2em;
+    img {
+      width: 15%;
+    }
+    p {
+      font-size: 0.4em;
+    }
+  }
+
+  #formContainer {
+    flex-direction: row;
+    input {
+      min-width: 300px;
+      margin-right: 10px;
+    }
+    button {
+      margin: 0;
+      min-width: 150px;
+    }
+    #response {
+      position: absolute;
+      margin: 43px 0 0 15px;
+    }
+  }
+
+  #imageContainer {
+    img {
+      max-width: 600px;
+    }
+  }
+}
