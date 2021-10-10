@@ -192,6 +192,9 @@ input::placeholder {
   #header {
     font-size: 2em;
   }
+  #header h4 {
+    margin-top: 40px;
+  }
   #header img {
     width: 15%;
   }
